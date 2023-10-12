@@ -15,16 +15,16 @@ Link: [customer care tweets KSA on Kaggle]([https://www.kaggle.com/datasets/mans
 The sentiment analysis project was organized into the following essential stages:
 
 ## 1. Labeling:
-Due to the lack of resources for labeling in Arabic and the absence of sentiment labels in the original dataset,  the text was translated into English using the googletrans library, before being annotated with TextBlob for sentiments.
+The text was translated into English using the googletrans library before being annotated using TextBlob for sentiments due to the lack of Arabic labeling resources and the absence of sentiment labels in the original dataset.
 
 ## 2. Preprocessing:
-There are various procedures involved in preprocessing tweets for sentiment analysis. Any special characters, digits, URLs, and Twitter identities were first removed. Second, to maintain uniformity, all text is changed to lowercase. The tweets are then tokenized, which involves separating them into separate words or tokens. The tokens are then lemmatized to return them to their original forms.
+Tweet sentiment analysis requires some preprocessing steps. The text is cleaned by removing any non-alphabetic characters, links, and usernames. Next, the text is split into tokens, which are individual words or units. Finally, the tokens are lemmatized to get their base forms.
 
 ## 3. Feature Extraction:
-Feature extraction was used to vectorize data by converting preprocessed text into numerical data using TF-IDF.
+We applied feature extraction to transform the cleaned text into numeric data with TF-IDF. This technique assigns weights to words based on their frequency and importance in the documents.
 
 ## 4. Classification:
-For sentiment analysis, many classification models were used, including Nave Base, logistic regression, SVM, neural networks, and Random Forest. Then, to analyze the model, we used accuracy to determine how well the classifier performs in predicting the sentiments of the tweets.
+Random Forest classifications were employed for sentiment analysis. After that, to evaluate the model, we calculated the accuracy and confusion matrices to assess how well the classifier performed at predicting the sentiments of the tweets.
 
 ## Results:
 Preprocessing of 14485 tweets out of 14640 was successful. There were 5415 positive, 3632 negative, and 5438 neutral tweets total, which were divided into three groups.
