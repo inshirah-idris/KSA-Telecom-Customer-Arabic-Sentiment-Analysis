@@ -1,20 +1,21 @@
-# KSA-Telecom-s-Customer-Arabic-Sentiment-Analysis
-A comprehensive analysis of public airline sentiment based on the 'Twitter US Airline Sentiment' dataset that is available in Kaggle. The project involves four main stages: tweet preprocessing, sentiment labeling, feature extraction, and sentiment classification.
+# KSA-Telecom-Customer-Arabic-Sentiment-Analysis
+The project intends to analyze Saudi Telecom customers' sentiments based on tweets to the company's customer care account. The dataset used for this analysis is the 'customer care tweets KSA' dataset from Kaggle in the Arabic language, which has severe processing challenges and a lack of labeling tools and resources. Tweet preprocessing, sentiment labeling, feature extraction, and sentiment classification are the four primary stages of the project.
 
 # Install Necessary Libraries
 ! pip install emoji
+
 ! pip install googletrans==3.1.0a0
 
 # Dataset:
-This project uses the "Twitter US Airline Sentiment" dataset available on Kaggle. The dataset provides a collection of tweets with sentiments about different US airlines. The tweets contain information about the sentiment (positive, neutral, or negative) of six US airline companies.
+The project utilizes the "customer care tweets KSA" dataset from Kaggle, containing 10,000 tweets from a telecom business customer service account. This dataset has no labels associated with it.
 
 Link: [customer care tweets KSA on Kaggle]([https://www.kaggle.com/datasets/mansourhussain/customer-care-tweets-ksa])
 
 # Methodology
-The sentiment analysis project was structured according to the following key phases:
+The sentiment analysis project was organized into the following essential stages:
 
 ## 1. Labeling:
-Although the dataset was originally annotated with sentiment labels, we decided to follow our own labeling for a more comprehensive analysis. Labeling was performed using TextBlob Data Labeling.
+Due to the lack of resources for labeling in Arabic and the absence of sentiment labels in the original dataset,  the text was translated into English using the googletrans library, before being annotated with TextBlob for sentiments.
 
 ## 2. Preprocessing:
 There are various procedures involved in preprocessing tweets for sentiment analysis. Any special characters, digits, URLs, and Twitter identities were first removed. Second, to maintain uniformity, all text is changed to lowercase. The tweets are then tokenized, which involves separating them into separate words or tokens. The tokens are then lemmatized to return them to their original forms.
